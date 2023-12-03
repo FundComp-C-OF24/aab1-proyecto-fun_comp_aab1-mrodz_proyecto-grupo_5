@@ -1,0 +1,44 @@
+Inicio
+    //Declaracion de variables
+        nombre = ""
+        condicion = "Si"
+        notaAA= 0
+        notaACD=0
+        noteAPE=0
+        cedula=0
+        contadorAprovados=0
+        contadorReprovados=0
+        total=0
+        porcentajeAprovados=0
+        porcentajeReprovados=0
+    //Proceso
+        Hacer
+            >>"Ingrese el nombre del estudiante"
+            <<nombre
+            >>"Ingrese la cedula"
+            <<cedula
+            notaACD = aleatorio (1-10)
+            notaAA = aleatorio (1-10)
+            notaAPE = aleatorio (1-10)
+            total = (notaAA+notaACD+notaAPE) / 3
+            >>Notas del Bimestre
+            >>"Nota ACD: " notaACD
+            >>"Nota APE: " notaAPE
+            >>"Nota AA: " notaAA
+            >>"Notal Final: " total
+            Si total >= 7 Entonces
+                >>"El estudiante: " nombre " con cedula de identidad " cedula " esta aprovado"
+                contadorAprovados = contadorAprovados + 1
+            Si no
+                >>"El estudiante: " nombre " con cedula de identidad " cedula " esta Reprovado"
+                contadorReprovados = contadorReprovados + 1
+            Fin Si
+            >>"Desea ingresar mas estudantes"
+            <<condicion
+        Mientras condicion == "Si" 
+    //Salida
+        porcentajeAprovados = (contadorAprovados * 100) / (contadorAprovados + contadorReprovados)
+        porcentajeReprovados = (contadorReprovados * 100) / (contadorAprovados + contadorReprovados)
+        >>"El porcentaje de aprovados es: " porcentajeAprovados "%"
+        >>"El porcentaje de reprovados es: " porcentajeReprovados "%"
+Fin

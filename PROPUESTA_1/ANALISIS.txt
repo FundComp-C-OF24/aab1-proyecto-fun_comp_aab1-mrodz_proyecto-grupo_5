@@ -1,0 +1,16 @@
+    noteAA = aleatorio entre 1-10
+    noteAPE = aleatorio entre 1-10
+    noteACD = aleatorio entre 1-10
+    total = notaAA + notaACD + notaACD
+
+    Si total >= 7
+        Aprovo la materia 
+        +1 en contador de aprovados
+    Si no
+        Reprobo la materia
+        +1 en contador de Reprovados
+    
+    porcentaje de Aprovados = contador de aprovados * 100 / contador de aprovados + contador de Reprovados
+    porcentaje de Reprovados = contador de reprovados * 100 / contador de aprovados + contador de Reprovados
+
+    Imprimir el porcentaje de aprovados y reprovados
